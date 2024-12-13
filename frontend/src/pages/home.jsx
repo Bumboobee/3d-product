@@ -1,9 +1,9 @@
 import { useSnapshot } from "valtio";
+import { CustomButton } from "../components";
 import { motion, AnimatePresence } from "framer-motion";
 import { headContainerAnimation, headContentAnimation, headTextAnimation, slideAnimation } from "../config/motion";
 
 import state from "../store";
-import { CustomButton } from "../components";
 
 const Home = () => {
   const snap = useSnapshot(state);
@@ -13,25 +13,28 @@ const Home = () => {
       {snap.intro ? (
         <motion.section className="home" {...slideAnimation("left")}>
           <motion.header {...slideAnimation("down")}>
-            <img src="./threejs.png" alt="logo" className="w-8 h-8 object-contain" />
+            <img src="./256x256.svg" alt="logo" className="w-16 h-16 object-contain" />
           </motion.header>
 
           <motion.div className="home-content" {...headContainerAnimation}>
             <motion.div {...headTextAnimation}>
-              <h1 className="head-text uppercase">
-                Let's <br className="xl:block hidden" /> Do it.
+              <h1 className="head-text uppercase !text-gray-100">
+                Vamos <br className="xl:block hidden" />{" "}
+                <span className="italic" style={{ color: snap.color }}>
+                  Criar?
+                </span>
               </h1>
             </motion.div>
 
             <motion.div className="flex flex-col gap-5" {...headContentAnimation}>
-              <p className="max-w-md font-normal text-gray-600 text-base">
-                Create your unique and exclusive shirt with our brand-new 3D customization tool.{" "}
-                <strong>unleash your imagination</strong> and define your own style.
+              <p className="max-w-md font-normal text-gray-400 text-base">
+                Crie sua camiseta única e exclusiva com nossa ferramenta inovadora de personalização em 3D.{" "}
+                <strong>Solte sua imaginação</strong> e mostre seu estilo ao mundo.
               </p>
 
               <CustomButton
                 type="filled"
-                title="Customize It"
+                title="Customizar"
                 handleClick={() => (state.intro = false)}
                 customStyles="w-fit px-4 py-2.5 font-bold text-sm"
               />

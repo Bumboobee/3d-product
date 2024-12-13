@@ -1,0 +1,33 @@
+{
+  "name": "3d-product",
+  "version": "1.0.0",
+  "description": "A 3D Fullstack project using three.js and motion frames",
+  "main": "index.js",
+  "scripts": {
+    "server": "npm run start --prefix backend",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bumboobee/3d-product.git"
+  },
+  "keywords": [
+    "Node",
+    "React",
+    "ThreeJS",
+    "Fullstack",
+    "OpenAi",
+    "DallE3"
+  ],
+  "author": "Bumboobee",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bumboobee/3d-product/issues"
+  },
+  "homepage": "https://github.com/Bumboobee/3d-product#readme",
+  "dependencies": {
+    "concurrently": "^9.1.0"
+  }
+}
