@@ -18,6 +18,7 @@
     "express": "^4.21.2",
     "mongoose": "^8.8.4",
     "nodemon": "^3.1.9",
-    "openai": "^4.76.3"
+    "openai": "^4.76.3",
+    "serve-favicon": "^2.5.0"
   }
 }
