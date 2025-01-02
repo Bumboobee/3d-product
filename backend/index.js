@@ -8,8 +8,9 @@ import dalleRoutes from "./routes/dalle.routes.js";
 dotenv.config();
 
 const app = express();
+const __dirname = path.resolve();
 
-app.use(favicon(path.join(path.resolve(), "public", "favicon.ico")));
+app.use(favicon(path.join(__dirname, "public", "favicon.ico")));
 
 app.use(cors());
 app.use(express.json({ limit: "50mb" }));
